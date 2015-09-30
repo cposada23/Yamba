@@ -181,10 +181,12 @@ public class StatusFragment extends Fragment {
                 cloud.postStatus(params[0]);
 
                 Log.d(TAG, "Successfully posted to the cloud: " + params[0]);
+                respuesta = "Successfully posted";
                 return "Successfully posted";
             } catch (Exception e) {
                 Log.e(TAG, "Failed to post to the cloud", e);
                 e.printStackTrace();
+                respuesta = "Failed to post";
                 return "Failed to post";
             }
 

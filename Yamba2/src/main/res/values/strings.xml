@@ -13,5 +13,6 @@
     <string name="password_summary">How do you log in?</string>
     <string name="status_update">Status Update</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragmentBlue">;)</string>
 
 </resources>

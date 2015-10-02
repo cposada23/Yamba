@@ -1,1 +1,1 @@
-include ':app',':Yamba2',':Yamba3'
+include ':Yamba2', ':Yamba3', 'Yamba1'

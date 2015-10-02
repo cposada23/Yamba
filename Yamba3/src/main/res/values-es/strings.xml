@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Yamba</string>
+    <string name="hello_world">Hola Mundo!</string>
+    <string name="action_settings">Configuración</string>
+    <string name="status_button_tweet">Tuitear</string>
+    <string name="status_text_hint">Qué estás pensando?</string>
+    <string name="tweet">Tuitear</string>
+    <string name="username">Usuario</string>
+    <string name="username_summary">Cual es tu nombre de usuario?</string>
+    <string name="password">Contraseña</string>
+    <string name="password_summary">Como conectarte?</string>
+    <string name="status_update">Estado actualizado</string>
+    <string name="hello_blank_fragment">Hola fragmento blanco</string>
+    <string name="fragmentBlue">;)</string>
+    <string name="interval">Actualizar intervalo</string>
+    <string name="interval_summary">Que tan frecuente deberían actualizarse los datos?</string>
+    <string name="title_activity_main">YAMBA ---></string>
+
+</resources>

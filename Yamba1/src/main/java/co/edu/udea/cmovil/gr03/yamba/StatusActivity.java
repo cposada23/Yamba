@@ -31,46 +31,6 @@ public class StatusActivity extends Activity {
     private EditText mTextStatus;
     private TextView mTextCount;
     private int mDefaultColor;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_status);
-        //Inicializo los componentes
-        mButtonTweet = (Button) findViewById(R.id.status_button_tweet);
-        mTextStatus = (EditText) findViewById(R.id.status_text);
-        mTextCount = (TextView) findViewById(R.id.status_text_count);
-
-        mTextCount.setText(Integer.toString(140));
-        mDefaultColor = mTextCount.getTextColors().getDefaultColor();
-        mTextStatus.addTextChangedListener(textWatcher);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_status, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-
-
     private TextWatcher textWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
@@ -93,6 +53,42 @@ public class StatusActivity extends Activity {
         public void afterTextChanged(Editable editable) {
         }
     };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_status);
+        //Inicializo los componentes
+        mButtonTweet = (Button) findViewById(R.id.status_button_tweet);
+        mTextStatus = (EditText) findViewById(R.id.status_text);
+        mTextCount = (TextView) findViewById(R.id.status_text_count);
+
+        mTextCount.setText(Integer.toString(140));
+        mDefaultColor = mTextCount.getTextColors().getDefaultColor();
+        mTextStatus.addTextChangedListener(textWatcher);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_status, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     //Activa y desactiva el boton mButtonTweet
     private void checkFieldsForEmptyValues() {
